@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel = "stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        .resume-section {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #312e2e;
+            background-color: #b6acac;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dynamic Resume Builder</h1>
+
+    <form id="resumeForm">
+        <!-- Personal Information -->
+        <h3>Personal Information</h3>
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <span id="nameError" class="error"></span><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <span id="emailError" class="error"></span><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" name="phone"><br><br>
+        <span id="phoneError" class="error"></span><br>
+
+        <!-- Education -->
+        <h3>Education</h3>
+        <label for="degree">Degree:</label><br>
+        <input type="text" id="degree" name="degree"><br><br>
+
+        <label for="institution">Institution:</label><br>
+        <input type="text" id="institution" name="institution"><br><br>
+
+        <label for="year">Year of Graduation:</label><br>
+        <input type="text" id="year" name="year"><br><br>
+
+        <!-- Work Experience -->
+        
+        
+        
+
+        
+        
+
+        
+        
+
+        <!-- Skills -->
+        <h3>Skills</h3>
+        <label for="skills">Skills (comma-separated):</label><br>
+        <input type="text" id="skills" name="skills"><br><br>
+
+        <button type="button" onclick="generateResume()">Generate Resume</button>
+    </form>
+
+    <!-- Resume Output Section -->
+    <div id="resumeOutput" class="resume-section" style="display:none;">
+        <h2>Your Resume</h2>
+        <p id="outputName"></p>
+        <p id="outputContact"></p>
+        <h3>Education</h3>
+        <p id="outputEducation"></p>
+        <h3>Experience</h3>
+        <p id="outputExperience"></p>
+        <h3>Skills</h3>
+        <p id="outputSkills"></p>
+    </div>
+
+    <!-- TypeScript file -->
+    <script src="script.js" type="module"></script>
+</body>
+</html>
